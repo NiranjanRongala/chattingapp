@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet id="11" author="nk">
+        <createTable tableName="threadmembers">
+
+            <column name="memberid" type="int" autoIncrement="true" startWith="1000" incrementBy="1">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="thread" type="int">
+                <constraints nullable="false"/>
+
+            </column>
+
+            <column name="user" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="12" author="nk">
+        <addForeignKeyConstraint baseTableName="threadmembers" baseColumnNames="thread" constraintName="fk_threas_id" referencedTableName="threads"
+                                 referencedColumnNames="thread_id" onDelete="CASCADE"/>
+
+        <addForeignKeyConstraint baseTableName="threadmembers" baseColumnNames="user" constraintName="fk_user_id" referencedTableName="users"
+                                 referencedColumnNames="userid" onDelete="CASCADE"/>
+    </changeSet>
+    <changeSet id="13" author="nk">
+        <insert tableName="threadmembers">
+            <column name="thread" value="1"/>
+            <column name="user" value="100"/>
+        </insert>
+        <insert tableName="threadmembers">
+            <column name="thread" value="1"/>
+            <column name="user" value="101"/>
+        </insert>
+        <insert tableName="threadmembers">
+            <column name="thread" value="2"/>
+            <column name="user" value="102"/>
+        </insert>
+        <insert tableName="threadmembers">
+            <column name="thread" value="2"/>
+            <column name="user" value="104"/>
+        </insert>
+        <insert tableName="threadmembers">
+            <column name="thread" value="2"/>
+            <column name="user" value="100"/>
+        </insert>
+        <insert tableName="threadmembers">
+            <column name="thread" value="3"/>
+            <column name="user" value="101"/>
+        </insert>
+        <insert tableName="threadmembers">
+            <column name="thread" value="3"/>
+            <column name="user" value="104"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,19 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet id="408" author="ravii">
+        <update tableName="exam">
+            <column name="Names" value="ravi"/>
+            <where>Names = 'sai'</where>
+        </update>
+    </changeSet>
+    <changeSet id="409" author="arun">
+        <addColumn tableName="exam">
+            <column name="type" type="varchar(20)"/>
+        </addColumn>
+    </changeSet>
+
+
+</databaseChangeLog>

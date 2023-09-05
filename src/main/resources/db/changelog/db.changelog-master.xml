@@ -1,0 +1,62 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <include
+            file="classpath:db/changelog/db.changelog-insert.sql"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-insertion.sql"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-createtab.sql"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-insertdata.sql"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-update1.sql"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-delete1.sql"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-create1.sql"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-create2.xml"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-insert1.xml"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-delete2.xml"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-update2.xml"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-create3.sql"
+            relativeToChangelogFile="false" />
+
+    <include
+            file="classpath:db/changelog/db.changelog-create_User_table.xml"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-create_Threads_table.sql"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-create_Threadmembers_table.xml"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-create_Threadmessages_table.xml"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/db.changelog-create_tab.xml"
+            relativeToChangelogFile="false" />
+    <include
+            file="classpath:db/changelog/operations.xml"
+            relativeToChangelogFile="false" />
+</databaseChangeLog>

@@ -1,0 +1,32 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet id="deleteFromExamTable" author="YourAuthorName">
+        <delete tableName="exam">
+            <where>names = 'siva'</where>
+        </delete>
+    </changeSet>
+    <changeSet id="createTableByee" author="sai">
+        <createTable tableName="byee">
+            <column name="name2" type="VARCHAR(20)"/>
+            <column name="gender" type="VARCHAR(20)" >
+
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="createTableByee25" author="yourname">
+        <createTable tableName="byee25">
+            <column name="name2" type="VARCHAR(20)"/>
+            <column name="gender" type="VARCHAR(20)" >
+                                <constraints nullable="false" checkConstraint="gender ='male'"/>
+
+            </column>
+        </createTable>
+    </changeSet>
+
+
+
+
+</databaseChangeLog>
